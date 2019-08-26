@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-meice-camera",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "美测 -  检测",
   "cordova": {
     "id": "cordova-plugin-meice-camera",
