@@ -55,3 +55,5 @@ cordova-plugin-meice-camera
 
 ```
 
+npm publish --registry=https://registry.npmjs.org/
+
