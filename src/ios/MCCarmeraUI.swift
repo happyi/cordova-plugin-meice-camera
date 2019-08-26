@@ -596,7 +596,7 @@ extension CustomerMCCarmeraUI: MCBLEDelegate,MCCameraDelegate {
             self.rightImg = image
         }
         if self.step == 2{
-          self.imgData.append(image.jpegData(compressionQuality: 1)!)
+          self.imgData.append(image.jpegData(compressionQuality: 0.7)!)
         }
     
         DispatchQueue.main.async {
