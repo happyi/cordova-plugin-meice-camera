@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-meice-camera",
+  "version": "1.0.9",
+  "description": "美测 -  检测",
+  "cordova": {
+    "id": "cordova-plugin-meice-camera",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happyi/cordova-plugin-meice-camera.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "ytt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/happyi/cordova-plugin-meice-camera/issues"
+  },
+  "homepage": "https://github.com/happyi/cordova-plugin-meice-camera#readme"
+}

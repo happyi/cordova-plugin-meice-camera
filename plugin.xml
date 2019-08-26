@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-meice-camera"
+  version="1.0.9">
+
+	<name>MCCameraSwift</name>
+
+	<description>
+		美测 -  检测
+	</description>
+
+	<license>MIT</license>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<js-module src="www/McCarmera.js" name="MCCameraSwiftPlugin">
+		<clobbers target="window.MCCamera" />
+	</js-module>
+
+	<!-- ios -->
+	<platform name="ios">
+		
+
+		<dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+		
+		<preference name="PHOTO_LIBRARY_USAGE_DESCRIPTION" default="使用相册" />
+		<preference name="CAMERA_LIBRARY_USAGE_DESCRIPTION" default="使用相机" />
+
+		
+
+		<config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+			<string>$PHOTO_LIBRARY_USAGE_DESCRIPTION</string>
+		</config-file>
+
+		<config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+			<string>$CAMERA_LIBRARY_USAGE_DESCRIPTION</string>
+		</config-file>
+
+		<config-file target="config.xml" parent="/*">
+			 <feature name="MCCameraSwiftPlugin">
+        		<param name="ios-package" value="MCCameraSwiftPlugin" />
+   			 </feature>
+		</config-file>
+
+
+		<source-file src="src/ios/MCCarmera.swift" />
+		<source-file src="src/ios/MCCarmeraUI.swift"/>
+		<resource-file src="src/ios/Resource/back.png"/>
+		<resource-file src="src/ios/Resource/caramera.png"/>
+		<resource-file src="src/ios/Resource/confirm.png"/>
+		<resource-file src="src/ios/Resource/next.png"/>
+		<resource-file src="src/ios/Resource/reset.png"/>
+		<resource-file src="src/ios/Resource/init.mp3"/>
+		<resource-file src="src/ios/Resource/left.mp3"/>
+		<resource-file src="src/ios/Resource/right.mp3"/>
+		<resource-file src="src/ios/Resource/mid.mp3"/>
+		<resource-file src="src/ios/Resource/finished.mp3"/>
+		<framework src="src/ios/MCCamera.framework" custom="true" embed="true"/>
+		<framework src="src/ios/MCCameraUI.framework" custom="true" embed="true" />
+		
+	</platform>
+
+	
+</plugin>

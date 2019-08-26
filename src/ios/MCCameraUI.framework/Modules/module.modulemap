@@ -1,0 +1,11 @@
+framework module MCCameraUI {
+  umbrella header "MCCameraUI.h"
+
+  export *
+  module * { export * }
+}
+
+module MCCameraUI.Swift {
+    header "MCCameraUI-Swift.h"
+    requires objc
+}
