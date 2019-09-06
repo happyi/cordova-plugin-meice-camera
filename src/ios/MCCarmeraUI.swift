@@ -47,7 +47,7 @@ class CustomerMCCarmeraUI: UIViewController {
     var prepared = false
     var auto = false
 //    var luminance = [73,90,100,158,153]
-    var luminance = [255,255,255,255,255]
+    var luminance = [255,255,255,158,153]
     var step = 0
     let steps = ["左脸","右脸","正脸"]
     let lights = ["日光","交叉","平行","UV","伍德"]
