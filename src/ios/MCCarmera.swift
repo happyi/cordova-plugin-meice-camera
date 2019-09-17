@@ -67,6 +67,9 @@ class DetectionResult {
                         let ui = CustomerMCCarmeraUI()
                         ui.delegate = self
                         ui.params = params
+                        
+//                        let ui = MCShootVC()
+//                        ui.delegate = self
                 
                         self.viewController.present(ui, animated: true, completion: nil)
                     }
@@ -90,7 +93,16 @@ class DetectionResult {
 }
 
 // 拍照界面代理和分析结果界面代理
-extension MCCameraSwiftPlugin: MCUIDelegate {
+extension MCCameraSwiftPlugin: MCUIDelegate,MCShootVCDelegate {
+    
+    func uploadSuccess(shootId: String) {
+        
+    }
+    
+    func uploadFailed(errCode: String, errMsg: String) {
+        
+    }
+    
     
     func uploadSuccess(result:Dictionary<String,Any>)
     {
@@ -102,7 +114,7 @@ extension MCCameraSwiftPlugin: MCUIDelegate {
     }
     
     func handelError(errMsg:String){
-        self.pluginResult = CDVPluginResult(status:CDVCommandStatus_ERROR,messageAs:"uploadFail->\(errMsg)")
+        self.pluginResult = CDVPluginResult(status:CDVCommandStatus_ERROR,messageAs:"\(errMsg)")
        
         self.commandDelegate.run {
             self.commandDelegate.send(self.pluginResult, callbackId: self.command?.callbackId)
